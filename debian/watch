@@ -1,0 +1,3 @@
+version=3
+opts=filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/pyzo-$1\.tar\.gz/ \
+https://github.com/pyzo/pyzo/tags .*/v?(\d\S*)\.tar\.gz

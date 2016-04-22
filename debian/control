@@ -1,0 +1,51 @@
+Source: pyzo
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Uploaders: Ghislain Antony Vaillant <ghisvail@gmail.com>
+Section: science
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python3,
+               python3-pyqt4 | python3-pyside,
+               python3-setuptools,
+               python3-sphinx
+Standards-Version: 3.9.8
+Vcs-Browser: https://anonscm.debian.org/cgit/debian-science/packages/pyzo.git
+Vcs-Git: https://anonscm.debian.org/git/debian-science/packages/pyzo.git
+Homepage: http://www.pyzo.org/
+X-Python3-Version: >= 3.2
+
+Package: pyzo
+Architecture: all
+Depends: ${misc:Depends},
+         ${python3:Depends},
+         python3-pyqt4 | python3-pyside,
+         ttf-dejavu-core,
+         ttf-dejavu-extra
+Suggests: pyzo-doc
+Description: interactive editor for scientific Python
+ Pyzo is a free and open-source computing environment based on Python. If
+ you’re used to e.g. Matlab, Pyzo can be considered a free alternative.
+ Essentially, Pyzo is a Python IDE, that plays well with conda to manage your
+ Python packages (though it works with any Python interpreter), and has a
+ website to help newcomers on their way. The IDE is aimed at interactivity and
+ simplicity, and consists of an editor, a shell, and a set of tools to help
+ the programmer in various ways.
+ .
+ This package provides the pyzo application.
+
+Package: pyzo-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends},
+         ${sphinxdoc:Depends}
+Description: documentation for pyzo
+ Pyzo is a free and open-source computing environment based on Python. If
+ you’re used to e.g. Matlab, Pyzo can be considered a free alternative.
+ Essentially, Pyzo is a Python IDE, that plays well with conda to manage your
+ Python packages (though it works with any Python interpreter), and has a
+ website to help newcomers on their way. The IDE is aimed at interactivity and
+ simplicity, and consists of an editor, a shell, and a set of tools to help
+ the programmer in various ways.
+ .
+ This package provides the documentation for pyzo.

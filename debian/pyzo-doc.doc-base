@@ -1,0 +1,9 @@
+Document: pyzo-doc
+Title: Pyzo documentation
+Author: The Pyzo development team
+Abstract: This is the reference documentation for the Pyzo application.
+Section: Science
+
+Format: HTML
+Index: /usr/share/doc/pyzo-doc/html/index.html
+Files: /usr/share/doc/pyzo-doc/html/*.html
