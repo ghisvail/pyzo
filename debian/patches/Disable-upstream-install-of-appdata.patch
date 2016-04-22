@@ -1,0 +1,44 @@
+From: Ghislain Antony Vaillant <ghisvail@gmail.com>
+Date: Fri, 22 Apr 2016 12:57:19 +0100
+Subject: Disable upstream install of appdata.
+
+---
+ setup.py | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+diff --git a/setup.py b/setup.py
+index cb9503d..1c47497 100644
+--- a/setup.py
++++ b/setup.py
+@@ -96,17 +96,17 @@ setup(
+ ## Post processing
+ 
+ # Install appdata.xml on Linux if we are installing in the system Python
+-if sys.platform.startswith('linux') and sys.prefix.startswith('/usr'):
+-    if len(sys.argv) >= 2 and sys.argv[1] == 'install':
+-        fname = 'pyzo.appdata.xml'
+-        filename1 = os.path.join(os.path.dirname(__file__), fname)
+-        filename2 = os.path.join('/usr/share/appdata', fname)
+-        try:
+-            bb = open(filename1, 'rb').read()
+-            open(filename2, 'wb').write(bb)
+-        except PermissionError:
+-            pass  # No sudo, no need to warn
+-        except Exception as err:
+-            print('Could not install %s: %s' % (fname, str(err)))
+-        else:
+-            print('Installed %s' % fname)
++#if sys.platform.startswith('linux') and sys.prefix.startswith('/usr'):
++#    if len(sys.argv) >= 2 and sys.argv[1] == 'install':
++#        fname = 'pyzo.appdata.xml'
++#        filename1 = os.path.join(os.path.dirname(__file__), fname)
++#        filename2 = os.path.join('/usr/share/appdata', fname)
++#        try:
++#            bb = open(filename1, 'rb').read()
++#            open(filename2, 'wb').write(bb)
++#        except PermissionError:
++#            pass  # No sudo, no need to warn
++#        except Exception as err:
++#            print('Could not install %s: %s' % (fname, str(err)))
++#        else:
++#            print('Installed %s' % fname)
